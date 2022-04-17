@@ -829,11 +829,13 @@
                     <!-- Left part start -->
                     <div class="col-lg-9 col-md-7">
                         <div class="dzFormMsg">
+                            
+                        </div>
+                        <div>
                             <select id="career" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                 <option selected disabled>General Enquires</option>
                                 <option value="1">Quoute Request</option>
                                 <option value="2">Career</option>
-        
                               </select>
                         </div>
                         <div class="clearfix m-b30">
@@ -1086,20 +1088,9 @@ var tpj=jQuery;
 		e.preventDefault();	//STOP default action
 		tpj('.dzFormMsg').html('<div class="gen alert alert-success">Submitting..</div>');
 		var dzFormAction = tpj(this).attr('action');
-		// var dzFormData = tpj(this).serialize();
+	
         let Data = new FormData(tpj('form')[1]);
-    
-        
-        // if(tpj('#files')[0]?.files[0]){
-           
-        //     // dzFormData = dzFormData +'&file='+ tpj('#files')[0].files[0]
-        //     // push({'file':tpj('#files')[0].files[0]})
-        //     Data.append('file',tpj('#files')[0].files[0])
-          
-        // }
-        // console.log(dzFormData)
-        
- 
+
 		tpj.ajax({
             type: 'POST',
             url: 'mail/mail.php',
@@ -1110,9 +1101,8 @@ var tpj=jQuery;
 			success: function(dzRes){
                 
 				msgDiv = '<div class="gen alert alert-success">Success</div>';
-				
 				tpj('.dzFormMsg').html(msgDiv);
-				// tpj('.dzForms')[0].reset();
+				tpj('.dzForms')[0].reset();
                 
 			}
 		})
