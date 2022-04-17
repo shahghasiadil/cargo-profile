@@ -1,6 +1,6 @@
 <?php
 
-define('TO_EMAIL', 'adil.cs50@gmail.com');
+define('TO_EMAIL', 'nevin609nevin@gmail.com');
 define('FROM_EMAIL', $_POST['dzEmail']);
 $MESSAGE = 'Hi Admin, <br/><br/>';
 $MESSAGE .= 'You got an user query from CargoZone. User details and Message are noted bellow: <br/><br/>';
