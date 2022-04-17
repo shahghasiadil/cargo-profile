@@ -821,16 +821,23 @@
 						<div class="section-head text-centere text-center">
 							<h2 class="h2">Get in <span class="text-primary">Touch</span></h2>
 							<div class="dez-separator bg-primary"></div>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the been when an unknown printer.</p>
+							
 						</div>
 					</div>
 				</div>
                 <div class="row">
                     <!-- Left part start -->
                     <div class="col-lg-9 col-md-7">
-                        <div class="dzFormMsg"></div>
+                        <div class="dzFormMsg">
+                            <select id="career" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                <option selected disabled>General Enquires</option>
+                                <option value="1">Quoute Request</option>
+                                <option value="2">Career</option>
+        
+                              </select>
+                        </div>
                         <div class="clearfix m-b30">
-                            <form method="post" class="dzForm" action="script/contact.php">
+                            <form method="post" class="dzForms" action="mail/mail.php" enctype="multipart/form-data">
                                 <input type="hidden" value="Contact" name="dzToDo" >
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6">
@@ -869,12 +876,10 @@
                                             </div>
                                         </div>
                                     </div>
-									<div class="col-lg-12 col-md-12 col-sm-12">
-										<div class="g-recaptcha-bx">
-											<div class="g-recaptcha" data-sitekey="<!-- Put reCaptcha Site Key -->" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-											<input class="form-control d-none" style="display:none;" data-recaptcha="true" required data-error="Please complete the Captcha">
-										</div>
-									</div>
+                                    <div class="col-lg-12 col-md-12" id="file-space">
+                                       
+                                    </div>
+								
                                     <div class="col-lg-12 col-md-12">
                                         <button name="submit" type="submit" value="Submit" class="site-button"> 
 											<span>Submit</span> 
@@ -981,6 +986,26 @@ var tpj=jQuery;
 
 	var revapi1014;
 	tpj(document).ready(function() {
+        tpj('#career').on('change',function(){
+            let html = ` <div class="form-group">
+                                            <div class="input-group"> 
+												<div class="input-group-prepend">
+													<span class="input-group-text">
+														<i class="fa fa-file"></i>
+													</span>
+												</div>
+												<input name="file" type="file" required class="form-control"  accept="pdf,doc,docx" placeholder="Resume" id="files">
+                                            </div>
+                                        </div>`
+
+            let value = tpj('#career').val();
+            
+            if(value == 2){
+                tpj('#file-space').html(html);
+            }else{
+                tpj('#file-space').html('');
+            }
+        });
 		if(tpj("#rev_slider_1014_1").revolution == undefined){
 			revslider_showDoubleJqueryError("#rev_slider_1014_1");
 		}else{
@@ -1056,6 +1081,42 @@ var tpj=jQuery;
 		}
 
 
+        tpj(".dzForms").submit(function(e)
+	{
+		e.preventDefault();	//STOP default action
+		tpj('.dzFormMsg').html('<div class="gen alert alert-success">Submitting..</div>');
+		var dzFormAction = tpj(this).attr('action');
+		// var dzFormData = tpj(this).serialize();
+        let Data = new FormData(tpj('form')[1]);
+    
+        
+        // if(tpj('#files')[0]?.files[0]){
+           
+        //     // dzFormData = dzFormData +'&file='+ tpj('#files')[0].files[0]
+        //     // push({'file':tpj('#files')[0].files[0]})
+        //     Data.append('file',tpj('#files')[0].files[0])
+          
+        // }
+        // console.log(dzFormData)
+        
+ 
+		tpj.ajax({
+            type: 'POST',
+            url: 'mail/mail.php',
+            cache: false,
+            contentType: false,
+            data: Data,
+            processData:false,
+			success: function(dzRes){
+                
+				msgDiv = '<div class="gen alert alert-success">Success</div>';
+				
+				tpj('.dzFormMsg').html(msgDiv);
+				// tpj('.dzForms')[0].reset();
+                
+			}
+		})
+	});
 	});	/*ready*/
 </script>
 </body>

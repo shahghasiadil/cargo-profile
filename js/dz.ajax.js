@@ -36,7 +36,7 @@ function contactForm()
 			data: dzFormData,
 			dataType: 'json',
 			success: function(dzRes){
-				if(dzRes.status == 1){
+				if(dzRes == 'success'){
 					msgDiv = '<div class="gen alert alert-success">'+dzRes.msg+'</div>';
 				}
 				
