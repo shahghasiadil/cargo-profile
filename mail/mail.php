@@ -43,6 +43,6 @@ $HEADERS = "MIME-Version: 1.0" . "\r\n";
 $HEADERS .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 $HEADERS .= 'From: <' . FROM_EMAIL . '>' . "\r\n";
 
-mail(TO_EMAIL, $MESSAGE, $HEADERS);
+mail(TO_EMAIL,'Career Hiring' ,$MESSAGE, $HEADERS);
 echo 1;
 exit();
