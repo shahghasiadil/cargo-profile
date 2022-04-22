@@ -2603,16 +2603,16 @@ blockquote:before {
     font-weight: 500;
 }
 .header-nav .nav > li > a:hover {
-    background-color: transparent;
-    color: #efbb20;
+    /* background-color: transparent; */
+    /* color: #efbb20; */
 }
 .header-nav .nav > li > a:active,
 .header-nav .nav > li > a:focus {
-    background-color: transparent;
+    /* background-color: transparent; */
 }
 .header-nav .nav > li.active > a,
 .header-nav .nav > li.current-menu-item > a {
-    background-color: transparent;
+    /* background-color: transparent; */
     color: #EFBB20;
 }
 .header-nav .nav > li:hover > a {
@@ -2692,7 +2692,7 @@ blockquote:before {
     visibility: visible;
 }
 .header-nav .nav > li .sub-menu li:hover > .sub-menu:before {
-    background-color: transparent;
+    /* background-color: transparent; */
     bottom: 0px;
     content: '';
     display: block;
@@ -3002,8 +3002,8 @@ blockquote:before {
     .header-nav .nav > li > a:hover,
     .header-nav .nav > li > a:active,
     .header-nav .nav > li > a:focus {
-        background-color: #f0f0f0;
-        text-decoration: none;
+        /* background-color: #f0f0f0; */
+        /* text-decoration: none; */
     }
     .header-nav .nav > li .mega-menu > li:after {
         display: none;
@@ -3106,8 +3106,8 @@ blockquote:before {
     .nav-dark.header-nav .nav > li > a:hover,
     .nav-dark.header-nav .nav > li > a:active,
     .nav-dark.header-nav .nav > li > a:focus {
-        background-color: #2D3239;
-        color: #EFBB20;
+        /* background-color: #2D3239; */
+        /* color: #EFBB20; */
     }
     .nav-dark.header-nav .nav > li ul,
     .nav-dark.header-nav .nav > li .sub-menu,
@@ -6307,7 +6307,7 @@ a,
 }
 .dez-tabs .nav > li > a:focus,
 .dez-tabs .nav > li > a:hover {
-    background-color: transparent;
+    /* background-color: transparent; */
 }
 .dez-tabs .nav li a:hover {
     border: 1px solid transparent;
