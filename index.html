@@ -37,9 +37,9 @@
 	<link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/settings.css">
 	<link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
     <style>
-        .txt-justify{
-            text-align: justify;
-            text-justify: inter-word;
+        .text-justify{
+            text-align: start !important;
+            text-justify: inter-word !important;
         }
     </style>
 </head>
@@ -350,12 +350,12 @@
                                 <h3 class="h3" style="margin-top: 30px;">About Company</h3>
                                 <div class="dez-separator bg-primary"></div>
                                 <div class="clear"></div>
-                                <p class="m-b0 txt-justify">Wagner Cargo Services LLC is an upcoming brand in logistics
+                                <p class="m-b0 text-justify">Wagner Cargo Services LLC is an upcoming brand in logistics
                                     aims to simplify logistics operation using smart technologies
                                     and future opportunities, resulting the benefits to end user in
                                     terms of quick, convenient and economical solutions. </p>
 
-                                <p class="m-b0 txt-justify">Our operation is handled from Dubai and expanded
+                                <p class="m-b0 text-justify">Our operation is handled from Dubai and expanded
                                         throughout all emirates, with core areas into land freight,
                                         loading and unloading, Packing and Warehousing, air
                                         and sea freight, and custom clearances.</p>
@@ -430,7 +430,7 @@
                             <div class="icon-bx-sm bg-secondry m-b20"> <span class="icon-cell"><i class="fa fa-life-saver text-primary"></i></span> </div>
                             <div class="icon-content">
                                 <h5 class="dez-tilte text-uppercase">LAND FREIGHT</h5>
-                                <p class="txt-justify">Wagner cargo can’t go a mile without offering our core
+                                <p class="text-justify">Wagner cargo can’t go a mile without offering our core
                                     service, we are here with a fleet of vehicles from Cargo
                                     vans to 3 ton light trucks to 120 ton heavy trucks, with all
                                     your shipping requirements of Material handling or
@@ -884,9 +884,9 @@
                         </div>
                         <div>
                             <select id="career" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                <option selected disabled>General Enquires</option>
-                                <option value="1">Quote Request</option>
-                                <option value="2">Career</option>
+                                <option value="1">General Enquires</option>
+                                <option value="2">Quote Request</option>
+                                <option value="3">Career</option>
                               </select>
                         </div>
                         <div class="clearfix m-b30">
@@ -1053,7 +1053,7 @@ var tpj=jQuery;
 
             let value = tpj('#career').val();
             
-            if(value == 2){
+            if(value == 3){
                 tpj('#file-space').html(html);
             }else{
                 tpj('#file-space').html('');
