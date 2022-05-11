@@ -128,7 +128,7 @@
                         <!-- Main Nav -->
                         <div class="header-nav navbar-collapse collapse navbar justify-content-start" id="navbarNavDropdown">
 							<ul class="nav navbar-nav" id="myNavbar">
-								<li><a class="scroll nav-link active" href="#head">Home</a></li>
+								<li><a class="scroll nav-link" href="#head" id="header">Home</a></li>
 								<li><a class="scroll nav-link" href="#section1">About</a></li>
 								<li><a class="scroll nav-link" href="#section2">Services</a></li>
 								<li><a class="scroll nav-link" href="#section7">Contact Us </a></li>
@@ -1168,7 +1168,12 @@ var tpj=jQuery;
 			}
 		})
 	});
+    $('.nav-link').removeClass('active')
+    $('#header').addClass('active')
+    // $('#head').addClass('active');
+    
 	});	/*ready*/
+
 </script>
 </body>
 </html>

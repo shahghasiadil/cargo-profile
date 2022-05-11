@@ -2613,7 +2613,7 @@ blockquote:before {
 .header-nav .nav > li.active > a,
 .header-nav .nav > li.current-menu-item > a {
     /* background-color: transparent; */
-    color: #EFBB20;
+    /* color: #EFBB20; */
 }
 .header-nav .nav > li:hover > a {
     color: #EFBB20;
